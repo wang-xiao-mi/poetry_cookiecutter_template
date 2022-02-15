@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "{{cookiecutter.project_name}}"
+version = "0.0.1"
+description = ""
+authors = ["{{cookiecutter.author}} <{{cookiecutter.email}}>"]
+license = "MIT"
+packages = [
+    { include = "{{cookiecutter.project_name}}" }
+]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+
+[[tool.poetry.source]]
+name = "aliyun"
+url = "https://mirrors.aliyun.com/pypi/simple/"
+default = true
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
